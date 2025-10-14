@@ -38,45 +38,61 @@
     .translate:hover {
       /* Q1: Move 60px right and 20px down */
       /* transform: ________; */
+      transform: translateX(60px) translateY(20px);
     }
 
     .rotate:hover {
       /* Q2: Rotate 45 degrees clockwise */
       /* transform: ________; */
+      transform: rotate(45deg);
     }
 
     .scale:hover {
       /* Q3: Make 1.5x bigger */
       /* transform: ________; */
+      transform: scale(1.5);
+
     }
 
     .skew:hover {
       /* Q4: Tilt 20deg horizontally */
       /* transform: ________; */
+      transform: skewX(20deg);
     }
 
     /* =========================================================
        🔹 PART 2: TRANSITIONS
        ========================================================= */
     .colorTransition {
-      background: tomato;
+      background-color: tomato;
       /* Q5: Add transition to change background smoothly (2s) */
       /* transition: ________; */
+      transition-behavior: smooth;
+      transition: background-color;
+      transition-duration: 2s;
     }
 
     .colorTransition:hover {
       /* Q6: Change background color to lightgreen */
       /* background: ________; */
+      background-color:lightgreen;
+      
     }
 
     .moveTransition {
       /* Q7: Smoothly move right and rotate using transition */
       /* transition: ________; */
+      /* transform: translateX(100px) rotate(30deg);
+      transition: transform 2s ease; */
+      transition: transform;
+      transition-duration: 2s;
+      transition-behavior: ease;
     }
 
     .moveTransition:hover {
       /* Q8: Use transform to move 100px right + rotate 30deg */
       /* transform: ________; */
+      transform: translateX(100px) rotate(30deg);
     }
 
     .timing {
@@ -88,6 +104,7 @@
     .timing:hover {
       /* Q10: Increase width to 200px */
       /* width: ________; */
+      width: 200px;
     }
 
     /* =========================================================
@@ -100,14 +117,15 @@
 
     /* Q12: Define bounce movement (up & down using translateY) */
     @keyframes bounceBox {
-      0% { transform: translateY(0); }
-      50% {  }
-      100% {  }
+      0% { transform: translateY(0px); }
+      50% {  transform: translateY(-50px);}
+      100% { transform: translateY(0px); }
     }
 
     .colorLoop {
       /* Q13: Animate color change in 4s infinitely */
       /* animation: ________; */
+      animation-name: bou;
     }
 
     /* Q14: Color transition sequence red → orange → yellow → green → blue */
